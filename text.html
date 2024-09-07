@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irisu Syndrome!</title>
+    <script src="js/dos.js"></script>
+    <script src="js/wdosbox.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        #jsdos-container {
+            width: 640px;
+            height: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Play Irisu Syndrome!</h1>
+    <div id="jsdos-container"></div>
+    <script>
+        (async () => {
+            const { Dos } = await window.Dos(document.getElementById("jsdos-container"), {
+                wdosboxUrl: 'js/wdosbox.js'
+            });
+            Dos.load('irisu.exe');
+        })();
+    </script>
+</body>
+</html>
